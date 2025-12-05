@@ -1,0 +1,18 @@
+--- main.c
++++ main.c
+@@ -30,9 +30,13 @@
+     }
+ }
+ 
+-int main(void) {
++int main(int argc, char **argv) {
+     int size = 6;
+     char pass='.', wall='#';
++    if (argc >= 2) {
++        int t = atoi(argv[1]);
++        if (t > 0) size = t;
++    }
+     srand((unsigned)time(NULL));
+ 
+     int rooms = size;
+

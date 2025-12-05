@@ -1,0 +1,18 @@
+--- main.c
++++ main.c
+@@ -33,8 +33,12 @@
+ int main(int argc, char **argv) {
+     int size = 6;
+     char pass='.', wall='#';
+-    if (argc >= 2) {
+-        int t = atoi(argv[1]);
++    if (argc >= 2 && argv[1][0] != '\0' && argv[1][1] != '\0') {
++        pass = argv[1][0];
++        wall = argv[1][1];
++    }
++    if (argc >= 3) {
++        int t = atoi(argv[2]);
+         if (t > 0) size = t;
+     }
+     srand((unsigned)time(NULL));
+

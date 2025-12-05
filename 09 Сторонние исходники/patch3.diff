@@ -1,0 +1,29 @@
+--- main.c
++++ main.c
+@@ -33,15 +33,19 @@
+ int main(int argc, char **argv) {
+     int size = 6;
+     char pass='.', wall='#';
+-    if (argc >= 2 && argv[1][0] != '\0' && argv[1][1] != '\0') {
+-        pass = argv[1][0];
+-        wall = argv[1][1];
++    unsigned int seed = (unsigned)time(NULL);
++    if (argc >= 2) {
++        seed = (unsigned)strtoul(argv[1], NULL, 10);
+     }
+-    if (argc >= 3) {
+-        int t = atoi(argv[2]);
++    if (argc >= 3 && argv[2][0] != '\0' && argv[2][1] != '\0') {
++        pass = argv[2][0];
++        wall = argv[2][1];
++    }
++    if (argc >= 4) {
++        int t = atoi(argv[3]);
+         if (t > 0) size = t;
+     }
+-    srand((unsigned)time(NULL));
++    srand(seed);
+ 
+     int rooms = size;
+     int G = 2 * rooms + 1;
+
