@@ -1,0 +1,21 @@
+\mainpage number-game
+
+\section intro Введение
+
+Это программа «Угадай число» с поддержкой римских чисел.
+Ниже вывод справки:
+
+\verbatim
+Usage: number-game [OPTIONS]
+Guess-the-number game (1..100).
+
+Игра "Угадай число" (диапазон 1..100).
+По умолчанию используются десятичные числа.
+При указании опции -r / --roman игра переходит в римские числа.
+
+选项 (Options):
+  -r, --roman    使用罗马数字进行游戏 / use Roman numerals
+  -h, --help     показать эту справку и выйти / show this help and exit
+  -V, --version  показать версию и выйти / show version and exit
+\endverbatim
+
