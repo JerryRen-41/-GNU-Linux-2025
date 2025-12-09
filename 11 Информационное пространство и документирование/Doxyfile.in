@@ -1,0 +1,9 @@
+PROJECT_NAME           = "number-game"
+OUTPUT_DIRECTORY       = doxygen-doc
+INPUT                  = src doc
+RECURSIVE              = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_MAN           = YES
+QUIET                  = YES
+
